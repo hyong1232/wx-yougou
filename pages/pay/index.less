@@ -1,0 +1,143 @@
+page{
+    height: 100vh -90rpx;
+}
+.revice_address_row{
+    .address_btn{
+        padding: 20rpx;
+        button{
+            width: 60%;
+        }
+    }
+    .address_message{
+        display: flex;
+        padding: 20rpx;
+        .user_message{
+            flex:5;
+            .user_name{
+
+            }
+            .detail_message{
+
+            }
+        }
+        .user_phone{
+            flex:3;
+            text-align: right;
+        }
+    }
+}
+.car_containt{
+    .containt_title{
+        font-size: 36rpx;
+        color: var(--themColor);
+        padding: 20rpx;
+        border-bottom: 1rpx solid currentColor;
+        border-top: 1rpx solid currentColor;
+    }
+    .blockimage{
+        width: 100%;
+    }
+    .containt_main{
+        .main_item{
+            padding: 10rpx;
+            border-bottom: 1rpx solid #ccc;
+            display: flex;
+            .check_box{
+                flex:1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            navigator{
+                flex:2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                image{
+                    width: 80%;
+                }
+            }
+            .goods_detail{
+                flex:4;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .goods_name{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp:2;
+                }
+                .goods_price_wrap{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10rpx;
+                    .goods_price{
+                        font-size: 34rpx;
+                        color: var(--themColor);
+                    }
+                    .goods_num_tolbtn{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        .decrement_btn{
+                            width: 55rpx;
+                            height: 55rpx;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #ccc;
+                        }
+                        .goods_num{
+                            min-width: 50rpx;
+                            text-align: center;
+                        }
+                        .increment_btn{
+                           width: 55rpx;
+                            height: 55rpx;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer_tools{
+    border: 1rpx solid #ccc;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 90rpx;
+    width: 100%;
+    display: flex;
+    .all_ck_box{
+        flex:2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .total_cost_wrap{
+        flex:5;
+        text-align: right;
+        padding-right: 15rpx;
+        .total_cost{
+            color: var(--themColor);
+            font-size: 32rpx;
+            font-weight: 600;
+        }
+    }
+    .settlement{
+        flex:3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--themColor);
+        color: #ffffff;
+        font-size: 34rpx;
+        font-weight: 600;
+    }
+}

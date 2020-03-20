@@ -1,0 +1,66 @@
+<view class="revice_address_row">
+    <view class="address_btn" wx:if="{{!address.userName}}">
+        <button type="primary" plain bindtap="handleAddress">获取收货地址</button>
+    </view>
+    <view class="address_message" wx:else>
+        <view class="user_message">
+            <view class="user_name">{{address.userName}}</view>
+            <view class="detail_message">{{address.all}}</view>
+        </view>
+        <view class="user_phone">{{address.telNumber}}</view>
+    </view>
+</view>
+<view class="car_containt">
+    <view class="containt_title">
+        购物车
+    </view>
+    <block wx:if="{{goodsList.length}}">
+        <view class="containt_main">
+            <view class="main_item" wx:for="{{goodsList}}" wx:key="goods_id">
+                <view class="check_box">
+                    <checkbox-group bindchange="handleChange" data-id="{{item.goods_id}}">
+                    <checkbox checked="{{item.isChecked}}" color="red"></checkbox>
+                    </checkbox-group>
+                </view>
+                <navigator>
+                    <image src="{{item.goods_small_logo}}" mode="widthFix" lazy-load="true" />
+                </navigator>
+                <view class="goods_detail">
+                    <view class="goods_name">
+                        {{item.goods_name}}
+                    </view>
+                    <view class="goods_price_wrap">
+                        <view class="goods_price">￥{{item.goods_price}}</view>
+                        <view class="goods_num_tolbtn">
+                            <view class="decrement_btn" bindtap="handleIncrement" data-opration="{{-1}}" data-id="{{item.goods_id}}">-</view>
+                            <view class="goods_num">{{item.num}}</view>
+                            <view class="increment_btn"bindtap="handleIncrement" data-opration="{{1}}" data-id="{{item.goods_id}}">+</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else  >
+        <image  class="blockimage" src="http://www.piseneasy.com/Theme/images/shoppingcart.jpg" mode="widthFix" lazy-load="true" />
+    </block>
+</view>
+<view class="footer_tools">
+    <view class="all_ck_box">
+        <checkbox-group bindchange="handleAllChecked">
+            <checkbox color="red" checked="{{allChecked}}"></checkbox>
+        </checkbox-group>
+        <view>
+            全选  
+        </view>
+    </view>
+    <view class="total_cost_wrap">
+        <view>
+            合计: <text class="total_cost">￥{{totalPrice}}</text>
+        </view>
+        <view>
+            包含运费
+        </view>
+    </view>
+    <view class="settlement" bindtap="handleSettlement">结算({{totalNum}})</view>
+</view>

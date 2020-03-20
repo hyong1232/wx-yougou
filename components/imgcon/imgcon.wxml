@@ -1,0 +1,4 @@
+<view wx:for="{{src}}" wx:key="*this" class="imgcon"   data-index="{{index}}" bindtap="handleclose">
+    <image src="{{item}}" mode="scaletoFill" lazy-load="true" />
+    <icon type="clear" size="18" color="red"></icon>
+</view>

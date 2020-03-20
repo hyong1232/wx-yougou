@@ -1,0 +1,91 @@
+<view class="user">
+    <view class="user_bgc_img">
+        <image src="{{userInfo.avatarUrl}}" mode="aspectFix" lazy-load="true" binderror="" bindload="" />
+    </view>
+    <view wx:if="{{userInfo.avatarUrl}}" class="user_info_wrap">
+        <view class="user_avatar">
+            <image class="" src="{{userInfo.avatarUrl}}" mode="widthFix" lazy-load="true"/>
+        </view>
+        <view class="user_nickname">{{userInfo.nickName}}</view>
+    </view>
+    <view wx:else class="user_login_btn">
+        <navigator  url="/pages/login/index" >
+            登陆
+        </navigator>
+    </view>
+    <view class="user_main">
+        <view class="user_main_containt">
+            <view class="user_history_wrap">
+                <view class="user_history_item">
+                    <navigator>
+                        <view class="history_num">0</view>
+                        <view class="history_name">收藏的店铺</view>
+                    </navigator>
+                </view>
+                <view class="user_history_item">
+                    <navigator url="/pages/collect/index">
+                        <view class="history_num">{{conllectsNum}}</view>
+                        <view class="history_name">收藏的商品</view>
+                    </navigator>
+                </view>
+                <view class="user_history_item">
+                    <navigator>
+                        <view class="history_num">0</view>
+                        <view class="history_name">关注的商品</view>
+                    </navigator>
+                </view>
+                <view class="user_history_item">
+                    <navigator>
+                        <view class="history_num">0</view>
+                        <view class="history_name">我的足迹</view>
+                    </navigator>
+                </view>
+            </view>
+            <view class="user_order_wrap">
+                <view class="order_title">我的订单</view>
+                <view class="order_item_wrap">
+                    <view class="order_item">
+                        <navigator url="/pages/order/index?type=1" >
+                            <text class="iconfont  icon-danju"></text>
+                            <view class="icon_name">全部订单</view>
+                        </navigator>
+                    </view>
+                    <view class="order_item">
+                        <navigator url="/pages/order/index?type=2" >
+                            <text class="iconfont   iconfukuantongzhi"></text>
+                            <view class="icon_name">待付款</view>
+                        </navigator>
+                    </view>
+                    <view class="order_item">
+                        <navigator url="/pages/order/index?type=3" >
+                            <text class="iconfont  icon-receipt-address"></text>
+                            <view class="icon_name">待收货</view>
+                        </navigator>
+                    </view>
+                    <view class="order_item">
+                        <navigator url="/pages/order/index?type=4" >
+                            <text class="iconfont  icon-tuihuotuikuan_dianpu"></text>
+                            <view class="icon_name">退货/退款</view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+            <view class="user_address">收货地址管理</view>
+            <view class="app_info_wrap">
+                <view class="app_info_item">
+                    <text>联系客服</text>
+                    <text>400-618-4000</text>
+                </view>
+                <navigator url="/pages/feedback/index" class="app_info_item">
+                    意见反馈
+                </navigator>
+                <view class="app_info_item">
+                    关于我们
+                </view>
+            </view>
+            <view class="recommend_wrap">
+                把应用推荐给其他人
+            </view>
+        </view>
+    </view>
+</view>

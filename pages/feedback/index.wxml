@@ -1,0 +1,29 @@
+<tabs tabs="{{tabs}}" bindhandletabchange="handletabchange">
+    <view class="fd_title">
+        问题种类
+    </view>
+    <view class="fd_tips">
+        <text>功能建议</text>
+        <text>购买遇到的问题</text>
+        <text>性能问题</text>
+        <text>其他</text>
+    </view>
+    <view class="fd_content">
+        <textarea value="{{inputVal}}"  placeholder="请描述一下你的问题" bindinput="">
+        </textarea>
+        <view class="add_btn">
+            <button bindtap="handleChooseimage" >
+                +   
+            </button>
+            <view class="imgcon" >
+                <imgcon src="{{imgList}}"    bindhandleclose="handlecloseimgcon"></imgcon>
+            </view>
+        </view>
+    </view>
+    <view class="fd_sub">
+        <button type="warn" size="mini" bindtap="handlesubmit">
+            <icon type="success_no_circle" size="23" color="white"></icon>
+            提交
+        </button>
+    </view>
+</tabs>

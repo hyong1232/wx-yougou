@@ -1,0 +1,5 @@
+<view class="auth">
+    <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleAuthorization">
+        授权登录
+    </button>
+</view>

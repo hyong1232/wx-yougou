@@ -1,0 +1,15 @@
+.pyg_search {
+  height: 90rpx;
+  width: 100vw;
+  padding: 10rpx;
+  background-color: var(--themColor);
+}
+.pyg_search navigator {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx;
+  background-color: #fff;
+  color: #666;
+}

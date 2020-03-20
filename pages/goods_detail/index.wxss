@@ -1,0 +1,95 @@
+page {
+  padding-bottom: 90rpx;
+}
+.detail .detail_swiper swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vw;
+  text-align: center;
+}
+.detail .detail_swiper swiper swiper-item image {
+  width: 60%;
+}
+.detail .goods_price {
+  font-size: 35rpx;
+  color: var(--themColor);
+  font-weight: 600;
+  padding: 15rpx;
+}
+.detail .goods_name_row {
+  border: 5rpx solid #dedede;
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail .goods_name_row .goods_name {
+  flex: 5;
+  font-size: 30rpx;
+  padding: 8rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.detail .goods_name_row .goods_conllect {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 2rpx solid #ccc;
+}
+.detail .goods_name_row .goods_conllect .iconfont {
+  font-size: 40rpx;
+}
+.detail .goods_name_row .goods_conllect .icon_active {
+  color: var(--themColor);
+}
+.detail .goods_introduce .introduce_title {
+  padding: 20rpx 0 20rpx 15rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+  color: var(--themColor);
+}
+.bot_tools {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  height: 90rpx;
+}
+.bot_tools .tools_items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: 24rpx;
+  position: relative;
+}
+.bot_tools .tools_items button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.bot_tools .btn_buy {
+  flex: 2;
+  color: #ffffff;
+  font-size: 30rpx;
+  font-weight: 600;
+  background-color: #eb4450;
+}
+.bot_tools .btn_car {
+  flex: 2;
+  color: #ffffff;
+  font-size: 30rpx;
+  font-weight: 600;
+  background-color: #ffa500;
+}

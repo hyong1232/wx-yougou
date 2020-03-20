@@ -1,0 +1,32 @@
+<view class="pyg_index">
+    <searchInput></searchInput>
+    <view class="index_swipper">
+        <swiper  class="" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false" 
+        interval="5000" duration="1000" circular bindchange="" bindanimationfinish="">
+            <swiper-item  wx:for="{{swiperList}}" wx:key="goods_id" class="" item-id="">
+                <navigator class="" target="self" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="{{item.open_type}}">
+                    <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="true"  />
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="index_cates">
+        <navigator wx:for="{{cateList}}" wx:key="name" class="" target="self" 
+        url="/pages/category/index"  open-type="{{item.open_type}}">
+            <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="true"  />
+        </navigator>
+    </view>
+    <view class="index_floor">
+        <view wx:for="{{floorList}}" wx:key="floor_list" wx:for-index="index1" wx:for-item="item1" class="floor_group">
+            <view class="floor_title">
+                <image  src="{{item1.floor_title.image_src}}" mode="widthFix" lazy-load="true" />
+            </view>
+            <view  class="product_list">
+                <navigator wx:for="{{item1.product_list}}" wx:key="name" wx:for-index="index2" wx:for-item="item2"
+                 class="" target="self" url="{{item2.navigator_url}}" hover-class="navigator-hover" open-type="{{item2.open_type}}">
+                    <image class="" src="{{item2.image_src}}" mode="{{index2 === 0?'widthFix':'scaleToFill'}}" lazy-load="true"  />
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>

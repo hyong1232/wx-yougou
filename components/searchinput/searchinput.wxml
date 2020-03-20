@@ -1,0 +1,5 @@
+<view class="pyg_search">
+    <navigator  target="self" url="/pages/search/index" hover-class="navigator-hover" open-type="navigate">
+        搜索
+    </navigator>
+</view>

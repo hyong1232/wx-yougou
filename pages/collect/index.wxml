@@ -1,0 +1,21 @@
+<tabs tabs="{{tabs}}" bindhandletabchange="handletabchange">
+    <view class="conllect_title">
+        <text class="active">全部</text>
+        <text>正在热卖</text>
+        <text>即将上线</text>
+    </view>
+    <view class="containt">
+        <view class="first_tab">
+            <navigator class="goods_item" wx:for="{{conllect}}" wx:key="goods_id"
+            url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <view class="goods_img_wrap">
+                    <image class="" src="{{item.goods_small_logo}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+                </view>
+                <view class="goods_info_wrap">
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</tabs>

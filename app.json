@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/index",
+    "pages/goods_list/index", 
+    "pages/goods_detail/index", 
+    "pages/cart/index",
+    "pages/collect/index", 
+    "pages/order/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    "pages/pay/index",
+    "log/log"  
+  ],  
+  "tabBar": {  
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+      "list": [
+          { 
+              "pagePath": "pages/index/index",
+              "text": "首页",
+              "iconPath": "icon/shouye.png",
+              "selectedIconPath": "icon/sshouye.png"
+          },
+          {
+              "pagePath": "pages/category/index",
+              "text": "分类",
+              "iconPath": "icon/fenlei.png",
+              "selectedIconPath": "icon/sfenlei.png"
+          },
+          {
+              "pagePath": "pages/cart/index",
+              "text": "购物车",
+              "iconPath": "icon/gwc.png",
+              "selectedIconPath": "icon/sgwc.png"
+          },
+          {
+              "pagePath": "pages/user/index",
+              "text": "我的",
+              "iconPath": "icon/person.png",
+              "selectedIconPath": "icon/sperson.png"
+          }
+      ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "黑马优购",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle":"dark"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,52 @@
+page {
+  background-color: #eee;
+}
+page .fd_title {
+  padding: 15rpx;
+}
+page .fd_tips {
+  padding: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+page .fd_tips text {
+  background-color: #ffffff;
+  padding: 15rpx 10rpx;
+  width: 30%;
+  text-align: center;
+  margin: 15rpx 10rpx;
+}
+page .fd_content {
+  background-color: #ffffff;
+  margin-top: 20rpx;
+}
+page .fd_content textarea {
+  padding: 10rpx;
+}
+page .fd_content .add_btn {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+page .fd_content .add_btn button {
+  width: 90rpx;
+  height: 90rpx;
+  margin: 0;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-left: 20rpx;
+  color: #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .fd_content .add_btn .imgcon imgcon {
+  display: flex;
+  flex-wrap: wrap;
+}
+page .fd_sub {
+  margin-top: 20rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  float: right;
+}
